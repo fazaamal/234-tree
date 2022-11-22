@@ -58,7 +58,7 @@ class Node:
 
 def balance(node: Node, middleKey = None):
     """
-    Balance overflowing node from bottom to top
+    Balance overflowing nodes from bottom to top
     """
     if(len(node.keys) > 3):
         parentMiddleKey = None
@@ -197,7 +197,7 @@ def printTree(root: Node):
 
         print('')
 
-def main():
+if __name__ == "__main__":
     values = [2, 13, 7, 16, 19, 9, 22, 10, 14, 17]
     root = Node([values[0]])
 
@@ -215,6 +215,3 @@ def main():
     print(bcolors.OKGREEN+'Searching for values not inserted to tree'+bcolors.ENDC)
     for value in excludedValues:
         print(str(value)+ ' included in tree? ' + str(search(root, value)))
-
-if __name__ == "__main__":
-    main()
